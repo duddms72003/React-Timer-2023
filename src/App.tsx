@@ -19,7 +19,7 @@ const H1 = styled.h1`
 `;
 
 function App() {
-  const [mm, setMm] = useState(1); // 초기값 설정
+  const [mm, setMm] = useState(25); // 초기값 설정
   const [ss, setSs] = useState(0); // 초기값 설정
 
   // const toggleClicked = () => setClicked((prev) => !prev);
