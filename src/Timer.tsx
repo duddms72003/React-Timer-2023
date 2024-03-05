@@ -8,15 +8,16 @@ interface TimerProps {
 }
 
 const BoxContainer = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
 `;
 
 const Box = styled(motion.div)`
   width: 200px;
   height: 300px;
-  margin-bottom: 100px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
   display: flex;
@@ -26,6 +27,12 @@ const Box = styled(motion.div)`
   font-weight: bold;
   color: #e84c3f;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+`;
+
+const Colon = styled.div`
+  color: white;
+  font-size: 180px;
+  margin: 0 20px;
 `;
 
 const Circle = styled(motion.button)`
@@ -153,6 +160,7 @@ const Timer: React.FC<TimerProps> = ({ mm, ss }) => {
               {minutes.toString().padStart(2, "0")}
             </Box>
           </motion.div>
+          <Colon>:</Colon>
           <motion.div>
             <Box
               key={seconds}
